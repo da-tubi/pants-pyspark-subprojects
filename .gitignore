@@ -1,5 +1,7 @@
 .python-version
 
+.idea/
+
 # Pants workspace files
 /.pants.*
 /dist/
