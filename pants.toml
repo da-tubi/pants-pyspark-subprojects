@@ -19,6 +19,7 @@ enable_resolves = true
 [python.resolves]
   cat_req = "3rdparty/cat.lock"
   dog_req = "3rdparty/dog.lock"
+  duck_req = "3rdparty/duck.lock"
 
 [python-bootstrap]
 search_path = ["<PATH>", "<PYENV>"]

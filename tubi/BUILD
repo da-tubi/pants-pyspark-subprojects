@@ -1,11 +1,13 @@
-project_names = ["cat", "dog"]
+project_names = ["cat", "dog", "duck"]
 project_srcs = {
     "cat": ["cat/**", "common/**"],
     "dog": ["dog/**", "common/**"],
+    "duck": ["duck/**", "common/**"],
 }
 project_tests = {
     "cat": ["cat/*_test.py"],
     "dog": ["dog/*_test.py"],
+    "duck": ["duck/*_test.py"],
 }
 
 for proj in project_names:
@@ -43,6 +45,19 @@ python_distribution(
     dependencies=[":dog-srcs"],
     provides=python_artifact(
         name="tubi-dog",
+        version="0.1.0",
+    ),
+)
+
+
+########################################
+# Packaging for duck
+########################################
+python_distribution(
+    name="tubi-duck",
+    dependencies=[":duck-srcs"],
+    provides=python_artifact(
+        name="tubi-duck",
         version="0.1.0",
     ),
 )
