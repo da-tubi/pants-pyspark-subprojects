@@ -3,9 +3,9 @@
 
 # See https://pants.readme.io/docs/using-pants-in-ci for tips on how to set up your CI with Pants.
 
-name: Pants
+name: pants-pyspark
 
-on: [push, pull_request]
+on: [pull_request]
 
 jobs:
   build:

@@ -4,18 +4,13 @@
 
 python_sources(
     name="cat-srcs",
-    sources = [
-        "cat/**",
-        "common/**"
-    ],
+    sources=["cat/**", "common/**"],
     resolve="cat_req",
 )
 
 python_tests(
     name="cat-tests",
-    sources = [
-        "cat/*_test.py"
-    ],
+    sources=["cat/*_test.py"],
     resolve="cat_req",
 )
 
@@ -34,18 +29,13 @@ python_distribution(
 
 python_sources(
     name="dog-srcs",
-    sources = [
-        "dog/**",
-        "common/**"
-    ],
+    sources=["dog/**", "common/**"],
     resolve="dog_req",
 )
 
 python_tests(
     name="dog-tests",
-    sources = [
-        "dog/*_test.py"
-    ],
+    sources=["dog/*_test.py"],
     resolve="dog_req",
 )
 

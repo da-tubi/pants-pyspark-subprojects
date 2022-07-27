@@ -15,6 +15,10 @@
 
 # REPL
 ./pants repl tubi/cat/tail.py
+
+# format
+./pants update-build-files
+./pants fmt ::
 ```
 
 ## IDE Integration
