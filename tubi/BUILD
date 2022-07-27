@@ -1,19 +1,29 @@
+project_names = ["cat", "dog"]
+project_srcs = {
+    "cat": ["cat/**", "common/**"],
+    "dog": ["dog/**", "common/**"],
+}
+project_tests = {
+    "cat": ["cat/*_test.py"],
+    "dog": ["dog/*_test.py"],
+}
+
+for proj in project_names:
+    python_sources(
+        name=f"{proj}-srcs",
+        sources=project_srcs[proj],
+        resolve=f"{proj}_req",
+    )
+
+    python_tests(
+        name=f"{proj}-tests",
+        sources=project_tests[proj],
+        resolve=f"{proj}_req",
+    )
+
 ########################################
-# Project cat
+# Packaging for cat
 ########################################
-
-python_sources(
-    name="cat-srcs",
-    sources=["cat/**", "common/**"],
-    resolve="cat_req",
-)
-
-python_tests(
-    name="cat-tests",
-    sources=["cat/*_test.py"],
-    resolve="cat_req",
-)
-
 python_distribution(
     name="tubi-cat",
     dependencies=[":cat-srcs"],
@@ -24,21 +34,8 @@ python_distribution(
 )
 
 ########################################
-# Project dog
+# Packaging for dog
 ########################################
-
-python_sources(
-    name="dog-srcs",
-    sources=["dog/**", "common/**"],
-    resolve="dog_req",
-)
-
-python_tests(
-    name="dog-tests",
-    sources=["dog/*_test.py"],
-    resolve="dog_req",
-)
-
 python_distribution(
     name="tubi-dog",
     dependencies=[":dog-srcs"],
