@@ -1,12 +1,12 @@
 # pants-pyspark: A Demo for PySpark based monorepo
 
 ## Three reasons to adopt pants
-1. virutalenv/conda/pyenv is NOT needed
-2. monorepo friendly
-   + test/lint/fmt only the changed part ./pants --changed-since=main  test
+1. virutalenv/conda/pyenv is **NOT** needed
+2. **Monorepo friendly**
+   + test/lint/fmt **only the changed part** ./pants --changed-since=main  test
    + the way to track dependencies for subprojects
    + …
-3. Smart dependencies inference via python imports
+3. **Smart dependencies inference** via python imports
    + eg. in the cat subproject, I add the rikai==0.1.13 , and I have not imported rikai. In this way, rikai will not be a dep in the whl python package
 
 ## Monorepo
