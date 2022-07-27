@@ -18,6 +18,7 @@
 
 # format
 ./pants update-build-files
+./pants fmt ::
 ```
 
 ## IDE Integration
