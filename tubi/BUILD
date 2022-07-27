@@ -9,9 +9,11 @@ project_tests = {
 }
 
 for proj in project_names:
+    sources = project_srcs[proj]
+    sources.append("!*_test.py")
     python_sources(
         name=f"{proj}-srcs",
-        sources=project_srcs[proj],
+        sources=sources,
         resolve=f"{proj}_req",
     )
 
