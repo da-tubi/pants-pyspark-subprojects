@@ -1,4 +1,7 @@
+########################################
 # Project cat
+########################################
+
 python_sources(
     name="cat",
     sources = [
@@ -16,7 +19,19 @@ python_tests(
     resolve="cat",
 )
 
+python_distribution(
+    name="tubi-cat",
+    dependencies=[":cat"],
+    provides=python_artifact(
+        name="tubi-cat",
+        version="0.1.0",
+    ),
+)
+
+########################################
 # Project dog
+########################################
+
 python_sources(
     name="dog",
     sources = [
@@ -32,4 +47,13 @@ python_tests(
         "dog/*_test.py"
     ],
     resolve="dog",
+)
+
+python_distribution(
+    name="tubi-dog",
+    dependencies=[":dog"],
+    provides=python_artifact(
+        name="tubi-dog",
+        version="0.1.0",
+    ),
 )

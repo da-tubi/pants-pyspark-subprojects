@@ -6,6 +6,9 @@
 
 # run all unit tests
 ./pants test :: --  -s
+
+# package all subprojects
+./pants package ::
 ```
 
 ## IDE Integration

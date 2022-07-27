@@ -6,13 +6,13 @@
 # https://www.pantsbuild.org/docs/python-third-party-dependencies.
 
 python_requirement(
-    name="pyspark 3.1.2",
+    name="cat_deps",
     requirements=["pyspark==3.1.2"],
     resolve="cat"
 )
 
 python_requirement(
-    name="pyspark 3.2.1",
+    name="dog_deps",
     requirements=["pyspark==3.2.1"],
     resolve="dog"
 )
