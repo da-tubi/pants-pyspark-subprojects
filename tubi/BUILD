@@ -3,7 +3,7 @@
 ########################################
 
 python_sources(
-    name="cat",
+    name="cat-srcs",
     sources = [
         "cat/**",
         "common/**"
@@ -21,7 +21,7 @@ python_tests(
 
 python_distribution(
     name="tubi-cat",
-    dependencies=[":cat"],
+    dependencies=[":cat-srcs"],
     provides=python_artifact(
         name="tubi-cat",
         version="0.1.0",
@@ -33,7 +33,7 @@ python_distribution(
 ########################################
 
 python_sources(
-    name="dog",
+    name="dog-srcs",
     sources = [
         "dog/**",
         "common/**"
@@ -51,7 +51,7 @@ python_tests(
 
 python_distribution(
     name="tubi-dog",
-    dependencies=[":dog"],
+    dependencies=[":dog-srcs"],
     provides=python_artifact(
         name="tubi-dog",
         version="0.1.0",
