@@ -7,6 +7,9 @@
 # run all unit tests
 ./pants test :: --  -s
 
+# test only the changed part
+./pants --changed-since=main  test
+
 # package all subprojects
 ./pants package ::
 
