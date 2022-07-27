@@ -9,6 +9,9 @@
 
 # package all subprojects
 ./pants package ::
+
+# generate lockfiles
+./pants generate-lockfiles
 ```
 
 ## IDE Integration
