@@ -6,3 +6,5 @@
 /.pants.*
 /dist/
 /.pids
+
+__pycache__/

@@ -12,6 +12,9 @@
 
 # generate lockfiles
 ./pants generate-lockfiles
+
+# REPL
+./pants repl tubi/cat/tail.py
 ```
 
 ## IDE Integration
