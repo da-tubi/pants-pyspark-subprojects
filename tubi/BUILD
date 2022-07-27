@@ -8,7 +8,7 @@ python_sources(
         "cat/**",
         "common/**"
     ],
-    resolve="cat",
+    resolve="cat_req",
 )
 
 python_tests(
@@ -16,7 +16,7 @@ python_tests(
     sources = [
         "cat/*_test.py"
     ],
-    resolve="cat",
+    resolve="cat_req",
 )
 
 python_distribution(
@@ -38,7 +38,7 @@ python_sources(
         "dog/**",
         "common/**"
     ],
-    resolve="dog",
+    resolve="dog_req",
 )
 
 python_tests(
@@ -46,7 +46,7 @@ python_tests(
     sources = [
         "dog/*_test.py"
     ],
-    resolve="dog",
+    resolve="dog_req",
 )
 
 python_distribution(

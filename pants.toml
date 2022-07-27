@@ -18,8 +18,8 @@ interpreter_constraints = ["==3.8.*"]
 enable_resolves = true
 
 [python.resolves]
-  cat = "3rdparty/cat.lock"
-  dog = "3rdparty/dog.lock"
+  cat_req = "3rdparty/cat.lock"
+  dog_req = "3rdparty/dog.lock"
 
 [python-bootstrap]
 search_path = ["<PATH>", "<PYENV>"]
