@@ -25,7 +25,7 @@ See https://github.com/da-tubi/pants-pyspark/pull/3
 #### Part 1: sources/tests/dependencies
 ```
 tubi/duck
-├── BUILD
+├── BUILD.pants
 ├── tail.py
 └── tail_test.py
 ```
@@ -45,42 +45,30 @@ to define the 3rd dependencies under the resolve `{proj_name}_req`.
 ```
 You must generate the lockfile via `./pants generate-lockfiles` to lock down all defined dependencies before developing.
 
-#### Part 3: Put sources/tests/package info in `tubi/BUILD`
+#### Part 3: Put package info in `tubi/BUILD.pants`
 ```
---- a/tubi/BUILD
-+++ b/tubi/BUILD
-@@ -1,11 +1,13 @@
--project_names = ["cat", "dog"]
-+project_names = ["cat", "dog", "duck"]
- project_srcs = {
-     "cat": ["cat/**", "common/**"],
-     "dog": ["dog/**", "common/**"],
-+    "duck": ["duck/**", "common/**"],
- }
- project_tests = {
-     "cat": ["cat/*_test.py"],
-     "dog": ["dog/*_test.py"],
-+    "duck": ["duck/*_test.py"],
- }
-
- for proj in project_names:
-@@ -46,3 +48,16 @@ python_distribution(
+--- a/tubi/BUILD.pants
++++ b/tubi/BUILD.pants
+@@ -27,3 +27,19 @@ python_distribution(
          version="0.1.0",
      ),
  )
-+
 +
 +########################################
 +# Packaging for duck
 +########################################
 +python_distribution(
 +    name="tubi-duck",
-+    dependencies=[":duck-srcs"],
++    dependencies=[
++        "tubi/duck:sources",
++        "tubi/common:sources@resolve=duck_req",
++    ],
 +    provides=python_artifact(
 +        name="tubi-duck",
 +        version="0.1.0",
 +    ),
 +)
++
 ```
 
 
@@ -95,6 +83,12 @@ You must generate the lockfile via `./pants generate-lockfiles` to lock down all
 
 # test only the changed part
 ./pants --changed-since=main  test
+
+# list all packages
+bin/package
+
+# package for tubi-cat
+bin/package tubi-cat
 ```
 
 ## IDE Integration
