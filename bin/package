@@ -1,0 +1,15 @@
+#!/bin/bash
+
+TUBI_TARGET_NAME=$1
+
+if [[ -z "$TUBI_TARGET_NAME" ]]; then
+    ./pants filter --target-type=python_distribution ::
+else
+    ./pants filter --target-type=python_distribution --address-regex=".*:${TUBI_TARGET_NAME}$" :: | wc -l | grep "^1$" && \
+    ./pants filter --target-type=python_distribution --address-regex=".*:${TUBI_TARGET_NAME}$" :: | xargs -I% ./pants package %
+fi
+
+
+
+
+

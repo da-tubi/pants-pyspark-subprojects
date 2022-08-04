@@ -95,19 +95,6 @@ You must generate the lockfile via `./pants generate-lockfiles` to lock down all
 
 # test only the changed part
 ./pants --changed-since=main  test
-
-# package all subprojects
-./pants package ::
-
-# generate lockfiles
-./pants generate-lockfiles
-
-# REPL
-./pants repl tubi/cat/tail.py
-
-# format
-./pants update-build-files
-./pants fmt ::
 ```
 
 ## IDE Integration

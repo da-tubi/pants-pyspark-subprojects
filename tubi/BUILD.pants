@@ -1,0 +1,29 @@
+########################################
+# Packaging for cat
+########################################
+python_distribution(
+    name="tubi-cat",
+    dependencies=[
+        "tubi/cat:sources",
+        "tubi/common:sources@resolve=cat_req",
+    ],
+    provides=python_artifact(
+        name="tubi-cat",
+        version="0.1.0",
+    ),
+)
+
+########################################
+# Packaging for dog
+########################################
+python_distribution(
+    name="tubi-dog",
+    dependencies=[
+        "tubi/dog:sources",
+        "tubi/common:sources@resolve=dog_req",
+    ],
+    provides=python_artifact(
+        name="tubi-dog",
+        version="0.1.0",
+    ),
+)
