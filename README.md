@@ -1,4 +1,4 @@
-# pants-pyspark: A Demo for PySpark based monorepo
+# pants-pyspark: A Demo for PySpark based monorepo [slides](docs/pants.md)
 
 ## Three reasons to adopt pants
 1. virutalenv/conda/pyenv is **NOT** needed
