@@ -1,17 +1,10 @@
 
 python_requirements(
-    name="cat_deps",
+    name="requirements",
     resolve="cat_req",
 )
 
 python_sources(
-    name=f"sources",
-    sources=["!*_test.py", "*.py"],
-    resolve=f"cat_req",
-)
-
-python_tests(
-    name="tests",
-    sources=["*_test.py"],
+    name="sources",
     resolve=f"cat_req",
 )
