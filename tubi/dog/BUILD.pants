@@ -1,3 +1,4 @@
+
 python_sources(
     name=f"sources",
     sources=["!*_test.py", "*.py"],
@@ -10,8 +11,7 @@ python_tests(
     resolve=f"dog_req",
 )
 
-python_requirement(
+python_requirements(
     name="dog_deps",
-    requirements=["pyspark==3.2.1"],
     resolve="dog_req",
 )
