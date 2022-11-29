@@ -1,5 +1,5 @@
 [GLOBAL]
-pants_version = "2.12.0"
+pants_version = "2.14.0"
 
 backend_packages.add = [
   "pants.backend.python",
@@ -17,11 +17,12 @@ interpreter_constraints = ["==3.8.*"]
 enable_resolves = true
 
 [python.resolves]
-  cat_req = "3rdparty/cat.lock"
-  dog_req = "3rdparty/dog.lock"
+  cat_req = "3rdparty/python/cat.lock"
+  dog_req = "3rdparty/python/dog.lock"
 
 [python-bootstrap]
 search_path = ["<PATH>", "<PYENV>"]
 
 [test]
 output = "all"
+
