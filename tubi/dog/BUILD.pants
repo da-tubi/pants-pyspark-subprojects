@@ -5,6 +5,6 @@ python_sources(
 )
 
 python_requirements(
-    name="dog_deps",
+    name="requirements",
     resolve="dog_req",
 )
