@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./pants --filter-target-type=python_tests list ::
+

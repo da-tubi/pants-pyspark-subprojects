@@ -1,12 +1,8 @@
 #!/bin/bash
 
-FOLDER=$1
+PROJ=$1
 
-if [ -d "${FOLDER}" ];then
-  ./pants dependencies --transitive $FOLDER:sources | grep "requirements#" > /tmp/targets.1
-  ./pants --filter-target-type=python_requirement list $FOLDER >  /tmp/targets.2
-  diff -u /tmp/targets.1 /tmp/targets.2
-else
-  echo "Please provide a folder"
-fi
+./pants dependencies --transitive //:${PROJ}_sources | grep "requirements#" > /tmp/targets.1
+./pants --filter-target-type=python_requirement list :: | grep ":${PROJ}_requirements#" > /tmp/targets.2
+diff -u /tmp/targets.1 /tmp/targets.2
 

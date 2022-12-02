@@ -18,7 +18,7 @@ python_distribution(
 ########################################
 # Project dog
 ########################################
-tubi_project(name = "dog")
+tubi_project(name = "dog", customize_tests=True)
 
 python_distribution(
     name="tubi-dog",
