@@ -1,11 +1,14 @@
+
 ########################################
-# Packaging for cat
+# Project: cat
 ########################################
+tubi_project(name = "cat")
+
 python_distribution(
     name="tubi-cat",
     dependencies=[
-        "tubi/cat:sources",
-        "tubi/common:sources@resolve=cat_req",
+        ":cat_sources",
+        "tubi/common:sources@resolve=cat",
     ],
     provides=python_artifact(
         name="tubi-cat",
@@ -14,13 +17,15 @@ python_distribution(
 )
 
 ########################################
-# Packaging for dog
+# Project dog
 ########################################
+tubi_project(name = "dog")
+
 python_distribution(
     name="tubi-dog",
     dependencies=[
-        "tubi/dog:sources",
-        "tubi/common:sources@resolve=dog_req",
+        ":dog_sources",
+        "tubi/common:sources@resolve=dog",
     ],
     provides=python_artifact(
         name="tubi-dog",

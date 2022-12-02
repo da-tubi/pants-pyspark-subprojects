@@ -1,7 +1,7 @@
 python_sources(
     name=f"sources",
     resolve=parametrize(
-        "cat_req",
-        "dog_req",
+        "cat",
+        "dog",
     ),
 )

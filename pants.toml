@@ -11,6 +11,7 @@ backend_packages.add = [
   "pants.backend.python.lint.flake8",
   "pants.backend.python.lint.isort",
 ]
+build_file_prelude_globs = ["pants-plugins/macros.py"]
 
 [source]
 root_patterns = ["/"]
@@ -20,8 +21,8 @@ interpreter_constraints = [">=3.8.*,<=3.10.*"]
 enable_resolves = true
 
 [python.resolves]
-  cat_req = "3rdparty/python/cat.lock"
-  dog_req = "3rdparty/python/dog.lock"
+  cat = "3rdparty/python/cat.lock"
+  dog = "3rdparty/python/dog.lock"
 
 [python-bootstrap]
 search_path = ["<PATH>", "<PYENV>"]
