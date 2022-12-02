@@ -1,0 +1,4 @@
+#!/bin/bash
+
+./pants generate-lockfiles --resolve=$1
+
