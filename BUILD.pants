@@ -8,7 +8,6 @@ python_distribution(
     name="tubi-cat",
     dependencies=[
         ":cat_sources",
-        "tubi/common:sources@resolve=cat",
     ],
     provides=python_artifact(
         name="tubi-cat",
@@ -25,7 +24,6 @@ python_distribution(
     name="tubi-dog",
     dependencies=[
         ":dog_sources",
-        "tubi/common:sources@resolve=dog",
     ],
     provides=python_artifact(
         name="tubi-dog",

@@ -24,6 +24,15 @@ enable_resolves = true
   cat = "3rdparty/python/cat.lock"
   dog = "3rdparty/python/dog.lock"
 
+[black]
+  version = "black==22.10.0"
+  lockfile = "3rdparty/black.lock"
+
+[isort]
+  args = ["--profile black", "--order-by-type"]
+  version = "isort==5.10.1"
+  lockfile = "3rdparty/isort.lock"
+
 [python-bootstrap]
 search_path = ["<PATH>", "<PYENV>"]
 
