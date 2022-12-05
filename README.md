@@ -4,6 +4,13 @@
 + User Friendly
 + Fast
 + Reproducible
+
+## Subprojects
++ cat: smart dependency inference (`rikai==0.1.13` is not required)
++ dog: demo usage of `customize_tests`
++ lion: demo usage of `customize_sources`
++ tiger: demo usage of `runtime_deps`
+
 ## Howto
 ### How to install the pants build tool
 Just use `./pants` bootstrap script and make sure that `python3` is available. If `python3` is not available,
