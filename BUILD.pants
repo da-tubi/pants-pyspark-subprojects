@@ -30,3 +30,19 @@ python_distribution(
         version="0.1.0",
     ),
 )
+
+########################################
+# Project tiger
+########################################
+tubi_project(name = "tiger", runtime_deps=["pyarrow"])
+
+python_distribution(
+    name="tubi-tiger",
+    dependencies=[
+        ":tiger_sources",
+    ],
+    provides=python_artifact(
+        name="tubi-tiger",
+        version="0.1.0",
+    ),
+)
