@@ -44,7 +44,7 @@ python_distribution(
         ":lion_sources",
     ],
     provides=python_artifact(
-        name="tubi-tiger",
+        name="tubi-lion",
         version="0.1.0",
     ),
 )
