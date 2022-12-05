@@ -34,16 +34,7 @@ python_distribution(
 ########################################
 # Project tiger
 ########################################
-tubi_project(name = "tiger", customize_sources=True)
-
-python_sources(
-    name="tiger_sources",
-    sources=["tubi/tiger/*.py"],
-    dependencies=[
-        ":tiger_requirements#pyarrow"
-    ],
-    resolve="tiger",
-)
+tubi_project(name = "tiger", runtime_deps=["pyarrow"])
 
 python_distribution(
     name="tubi-tiger",
