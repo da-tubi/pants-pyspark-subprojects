@@ -36,7 +36,13 @@ python_distribution(
 ########################################
 # Project lion
 ########################################
-tubi_project(name = "lion")
+tubi_project(name = "lion", customize_sources=True)
+
+python_sources(
+    name=f"lion_sources",
+    sources=["tubi/lion/*.py"],
+    resolve="lion",
+)
 
 python_distribution(
     name="tubi-lion",
