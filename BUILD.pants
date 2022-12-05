@@ -15,6 +15,7 @@ python_distribution(
     ),
 )
 
+
 ########################################
 # Project dog
 ########################################
@@ -27,6 +28,23 @@ python_distribution(
     ],
     provides=python_artifact(
         name="tubi-dog",
+        version="0.1.0",
+    ),
+)
+
+
+########################################
+# Project lion
+########################################
+tubi_project(name = "lion")
+
+python_distribution(
+    name="tubi-lion",
+    dependencies=[
+        ":lion_sources",
+    ],
+    provides=python_artifact(
+        name="tubi-tiger",
         version="0.1.0",
     ),
 )

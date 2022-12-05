@@ -23,7 +23,8 @@ enable_resolves = true
 [python.resolves]
   cat = "3rdparty/python/cat.lock"
   dog = "3rdparty/python/dog.lock"
-  tiger = "3rdparty/tiger/tiger.lock"
+  tiger = "3rdparty/python/tiger.lock"
+  lion = "3rdparty/python/lion.lock"
 
 [black]
   version = "black==22.10.0"

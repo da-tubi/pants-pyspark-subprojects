@@ -3,5 +3,6 @@ python_sources(
     resolve=parametrize(
         "cat",
         "dog",
+        "lion",
     ),
 )
