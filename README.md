@@ -22,12 +22,7 @@ You could use the following command line to test installation of pants:
 ```
 
 ### How to add a new subproject
-See https://github.com/da-tubi/pants-pyspark/pull/5
-
-And do not forget to generate the lockfile, eg.
-```
-bin/lock cat
-```
+See https://github.com/da-tubi/pants-pyspark/pull/8
 
 ## Cheatsheat
 ``` bash
